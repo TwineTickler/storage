@@ -311,42 +311,51 @@ def get_mode(l):
 # Return `True` if `string` meets the `min_length` requirement, otherwise `False`**
 
 def verify_string_length(s, min_length):
-    
-
-
-
+    if len(s) >= min_length:
+        return True
+    else:
+        return False
 
 '''python
 
-
+print(verify_string_length('This is a string', 17))
 
 
 '''
 
 # <br><br><br>
-# **Write a function called `repeating_num_series` that takes a list of numbers `series_of_numbers` and an integer called `num_times` as an argument. The function should return  a single list containing that series repeated `num_times`**
+# **Write a function called `repeating_num_series` that takes a list of numbers `series_of_numbers` and an integer called `num_times` as an argument. 
+# The function should return  a single list containing that series repeated `num_times`**
 
+def repeating_num_series(lst, num_times):
+    return lst * num_times
 
 '''python
 
-
-
+print(repeating_num_series([4, 3, 2, 1], 5))
 
 '''
 
 # <br><br><br>
-# **Write a function called `get_first_and_last` that takes a list as an argument and returns a tuple containing the first and last elements of that list. In the case of an argument of `length==1`, return a tuple with a single value. If the argument is an empty list, return an empty tuple.**
+# **Write a function called `get_first_and_last` that takes a list as an argument and returns a tuple containing the first and last elements of that list. 
+# In the case of an argument of `length==1`, return a tuple with a single value. If the argument is an empty list, return an empty tuple.**
 
+def get_first_and_last(lst):
+    return (lst[0], lst[-1])
 
 '''python
 
-
+print(get_first_and_last([5, 2, 3, 4, 2, 3, 9]))
 
 
 '''
 
 # <br><br><br>
 # **Write a function called `nth_element` that takes a list and `nth` as arguments. Return a list containing every `nth` element of the input list, starting with the first element.**
+
+
+
+
 
 
 '''python
