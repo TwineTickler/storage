@@ -278,6 +278,15 @@ def sum_of_divisible_by_n(low, high, n):
 # **Write a function called `get_mode` that takes a list of numbers as an argument and returns the most frequently occurring number in that list. 
 # Assume that there will be a definitive most frequently occurring number.**
 
+def get_index_of_first_largest_number(l):
+    largest_num = 0
+    for i, x in enumerate(l):
+        if largest_num < x:
+            largest_num = x
+            largest_num_index = i
+        
+    return largest_num_index
+
 def get_mode(l):
     l2 = [0] * len(l)
     for i, x in enumerate(l):
@@ -287,18 +296,24 @@ def get_mode(l):
                 counter += 1
         l2[i] = counter
 
-    for x3 in l2:
-        if x3 >
-    return(l2)
+    index_location = get_index_of_first_largest_number(l2)
+    return(l[index_location])
 
-print(get_mode([1, 1, 2, 6, 4, 8, 6, 3, 4, 6, 7, 8, 2, 0]))
+# print(get_mode([1, 1, 2, 6, 4, 8, 6, 3, 4, 6, 7, 8, 2, 0, 8, 9, 8, 8, 8, 9]))
+# print(get_index_of_first_largest_number([1, 2, 3, 4, 5, 4, 3, 2, 0, 3, 3]))
 
 
 '''python
 '''
 
 # <br><br><br>
-# **Write a function called `verify_string_length` that takes two arguments, a `string` and a `min_length`. Return `True` if `string` meets the `min_length` requirement, otherwise `False`**
+# **Write a function called `verify_string_length` that takes two arguments, a `string` and a `min_length`. 
+# Return `True` if `string` meets the `min_length` requirement, otherwise `False`**
+
+def verify_string_length(s, min_length):
+    
+
+
 
 
 '''python
