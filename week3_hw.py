@@ -353,14 +353,16 @@ print(get_first_and_last([5, 2, 3, 4, 2, 3, 9]))
 # <br><br><br>
 # **Write a function called `nth_element` that takes a list and `nth` as arguments. Return a list containing every `nth` element of the input list, starting with the first element.**
 
+one_through_twenty = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 
-
-
-
-
+def nth_element(lst, nth):
+    if (len(lst) < nth) or (nth < 1):
+        return False
+    return lst[0::nth]
+    
 '''python
 
-
+print(nth_element(one_through_twenty, 3))
 
 
 '''
@@ -371,9 +373,32 @@ print(get_first_and_last([5, 2, 3, 4, 2, 3, 9]))
 #     * expected result: `(5.933333333333334, 6.0, 1.0)`
 
 
-'''python
+'''python'''
+
+def get_mean(num_list):
+    result = 0
+    for n in num_list:
+        result += n
+    result = result / len(num_list)
+    return float(result)
+
+def get_median(num_list):
+    num_list.sort()
+    if len(num_list) % 2 == 0:
+        # Even number of entries
+        indx = len(num_list) / 2
+        indx = int(indx)
+        avg_of_two = (num_list[indx - 1] + num_list[indx]) / 2
+        return avg_of_two
+    else:
+        # Odd number of entries
+        indx = len(num_list) - 1
+        indx = indx // 2
+        return num_list[indx]
+
+# get mode has already been written
+
 def central_tendencies(num_list):
-    '''
     # Returns the mean, median and mode
     # of a list of numbers
     
@@ -396,20 +421,15 @@ def central_tendencies(num_list):
         
     # EXAMPLE
     # -------
-'''
-    nums = [2, 2, 3, 4, 5]
-    '''
+    # nums = [2, 2, 3, 4, 5]
     # >>> central_tendencies(nums)
     # (3.2, 3.0, 2.0)
-'''
     
-    
-    
-
-
+    return (get_mean(num_list), float(get_median(num_list)), float(get_mode(num_list)))
 
 ######## Test your Code Below ###########
 nums = [1,1,1,2,3,4,5,6,7,8,9,9,10,11,12]
+# nums = [2, 2, 3, 4, 5, 6]
 print(central_tendencies(nums))
 '''
 
@@ -422,7 +442,7 @@ print(central_tendencies(nums))
 #     * expected result: `(11, 14.638095238095238, 3.8259763770958175)`
 
 
-'''python
+python
 import math
 
 def distr_spread(num_list):
