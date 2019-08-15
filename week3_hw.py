@@ -431,7 +431,6 @@ def central_tendencies(num_list):
 nums = [1,1,1,2,3,4,5,6,7,8,9,9,10,11,12]
 # nums = [2, 2, 3, 4, 5, 6]
 print(central_tendencies(nums))
-'''
 
 # <br><br><br>
 # **Write a function `distr_spread()` that returns the range, variance, and standard deviation of a list of numbers**
@@ -441,12 +440,10 @@ print(central_tendencies(nums))
 # * Print the output from the function:
 #     * expected result: `(11, 14.638095238095238, 3.8259763770958175)`
 
-
-python
 import math
 
 def distr_spread(num_list):
-    '''
+    
     # Returns the range, sample variance, and 
     # sample standard deviation
     
@@ -469,21 +466,18 @@ def distr_spread(num_list):
         
     # EXAMPLE
     # -------
-'''
+
     nums = [2, 2, 3, 4, 5]
-    '''
+    
     # >>> distr_spread(nums)
     # (3, 1.7, 1.3038404810405297)
-'''
     
-    
-    
-    
-
 ######## Test your Code Below ###########
 nums = [1,1,1,2,3,4,5,6,7,8,9,9,10,11,12]
 print(distr_spread(nums))
-'''
+
+
+
 
 # <br><br><br>
 # **Write the `greatest_common_divisor` function, which takes two integerst and returns the largest number that divides both numbers.**
