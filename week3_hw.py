@@ -430,7 +430,7 @@ def central_tendencies(num_list):
 ######## Test your Code Below ###########
 nums = [1,1,1,2,3,4,5,6,7,8,9,9,10,11,12]
 # nums = [2, 2, 3, 4, 5, 6]
-print(central_tendencies(nums))
+# print(central_tendencies(nums))
 
 # <br><br><br>
 # **Write a function `distr_spread()` that returns the range, variance, and standard deviation of a list of numbers**
