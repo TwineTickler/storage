@@ -464,10 +464,13 @@ def distr_spread(num_list):
     #         the most common value in the num_list
     #         assume only one mode in the distribution
         
+    
+
+
     # EXAMPLE
     # -------
 
-    nums = [2, 2, 3, 4, 5]
+    # nums = [2, 2, 3, 4, 5]
     
     # >>> distr_spread(nums)
     # (3, 1.7, 1.3038404810405297)
