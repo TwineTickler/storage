@@ -460,7 +460,12 @@ def samp_variance(num_list):
     return (new_sum / (len(num_list) - 1))
 
 def samp_std(num_list):
-    return get_mode(num_list)
+    m = get_mean(num_list)
+    new_num_list = []
+    for x in num_list:
+        new_num_list.append((x - m) ** 2)
+    new_m = get_mean(new_num_list)
+    return(math.sqrt(new_m))
 
 def distr_spread(num_list):
     
@@ -496,9 +501,9 @@ def distr_spread(num_list):
     
 ######## Test your Code Below ###########
 
-# nums = [1,1,1,2,3,4,5,6,7,8,9,9,10,11,12,1,-5]
-nums = [2, 2, 3, 4, 5]
-print(distr_spread(nums))
+nums = [1,1,1,2,3,4,5,6,7,8,9,9,10,11,12,1,-5]
+# nums = [2, 2, 3, 4, 5]
+# print(distr_spread(nums))
 
 
 
@@ -506,6 +511,22 @@ print(distr_spread(nums))
 # <br><br><br>
 # **Write the `greatest_common_divisor` function, which takes two integerst and returns the largest number that divides both numbers.**
 
+def greatest_common_divisor(int1, int2):
+    result = int()
+    if int1 >= int2:
+        largest_num = int1
+    else:
+        largest_num = int2
+    for x in range(1,largest_num+1):
+        if (int1 % x == 0) and (int2 % x == 0):
+            result = x
+    return(result)
+
+# print(greatest_common_divisor(90, 150))
+
+
+
+
 
 '''python
 
@@ -515,7 +536,21 @@ print(distr_spread(nums))
 '''
 
 # <br><br><br>
-# **Write the `get_primes_dig_sum_to_n` function, that takes `list_of_ints` and `dig_sum` as arguments. The function should return all numbers in the input list that are primes with recursive digit sums equal to `dig_sum`**
+# **Write the `get_primes_dig_sum_to_n` function, that takes `list_of_ints` and `dig_sum` as arguments. 
+# The function should return all numbers in the input list that are primes with recursive digit sums equal to `dig_sum`**
+
+def get_primes_dig_sum_to_n(list_of_ints, dig_sum):
+    return True
+    # I'm not sure what this question is asking.
+
+
+# print(get_primes_dig_sum_to_n(nums, 5))
+
+
+
+
+
+
 
 
 '''python
@@ -527,8 +562,24 @@ print(distr_spread(nums))
 '''
 
 # <br><br><br>
-# **Write the classic "Fizz Buzz" coding challenge. Define a function `fizz_buzz` that takes `low` and `high` as arguments. The function should run through all the numbers in the range from `low` to `high`, `print()` 'Fizz Buzz' when the number is evenly divisible by both 5 and 3, "Fizz" when the number is only divisible by 3, and "Buzz" when the number is only divisible by 5.**
+# **Write the classic "Fizz Buzz" coding challenge. Define a function `fizz_buzz` that takes `low` and `high` as arguments. 
+# The function should run through all the numbers in the range from `low` to `high`, `print()` 
+# 'Fizz Buzz' when the number is evenly divisible by both 5 and 3, 
+# "Fizz" when the number is only divisible by 3, and "Buzz" when the number is only divisible by 5.**
 
+
+def fizz_buzz(low, high):
+    for x in range(low, high+1):
+        if x % 5 == 0 and x % 3 == 0:
+            print(str(x) + ' Fizz Buzz')
+        elif x % 5 == 0:
+            print(str(x) + ' Buzz')
+        elif x % 3 == 0:
+            print(str(x) + ' Fizz')
+        else:
+            print(x)
+
+# print(fizz_buzz(4, 20))
 
 '''python
 
@@ -538,12 +589,24 @@ print(distr_spread(nums))
 '''
 
 # <br><br><br>
-# **Write a function `lower_first_rest_upper()` that takes a string as input and returns a string where the first letter of each word is lowercase, and the rest of the word is uppercase**
+# **Write a function `lower_first_rest_upper()` that takes a string as input and returns a string where the first letter of each word is lowercase, 
+# and the rest of the word is uppercase**
 # * You will likely to use `string` methods:
 #     * `string.lower()`
 #     * `string.upper()`
 # * Print the result of your function call
 # * expected result: `fAVARTIA pERITA iS a sPECIES oF sEA sNAIL`
+
+string_to_mod = 'Favartia perita is a species of sea snail'
+
+def lower_first_rest_upper(stng):
+    my_list = []
+
+
+    pass
+
+
+print(lower_first_rest_upper(string_to_mod))
 
 
 '''python

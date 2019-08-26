@@ -26,6 +26,7 @@
 
 # Variables
 # ---------
+# frequency ------ :int:  number of seconds to wait before checking for new files in the directory
 # dir ------------ :str:  folder path to watch for changes
 # contents_master  :list: master list of directory contents
 # contents_current :list: current list of directory contents
@@ -41,6 +42,7 @@ import time
 
 print('VOD-alerts-v1 running. Use ctrl+c to quit...')
 dir = '/home/squall/pyprojects/repos/storage/vod-alerts/testing/'
+frequency = int(3) # int - number of seconds to check the file structure for new content
 
 # upload contents of a dir to a list
 def get_directory_contents(dir):
@@ -87,7 +89,7 @@ while looper:
                     if is_file_new(item):
                         print(item)
 
-        time.sleep(1)
+        time.sleep(frequency)
         contents_master = contents_current
     # Error handling
     except KeyboardInterrupt:
