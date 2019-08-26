@@ -442,6 +442,26 @@ nums = [1,1,1,2,3,4,5,6,7,8,9,9,10,11,12]
 
 import math
 
+def samp_range(num_list):
+    smallest_number = num_list[0]
+    largest_number = num_list[0]
+    for x in num_list:
+        if smallest_number > x:
+            smallest_number = x
+        if largest_number < x:
+            largest_number = x
+    return largest_number - smallest_number
+
+def samp_variance(num_list):
+    m = get_mean(num_list)
+    new_sum = 0
+    for x in num_list:
+        new_sum += ((x - m) ** 2)
+    return (new_sum / (len(num_list) - 1))
+
+def samp_std(num_list):
+    return get_mode(num_list)
+
 def distr_spread(num_list):
     
     # Returns the range, sample variance, and 
@@ -463,9 +483,8 @@ def distr_spread(num_list):
     #     samp_std: float
     #         the most common value in the num_list
     #         assume only one mode in the distribution
-        
-    
 
+    return (samp_range(num_list), samp_variance(num_list), float(samp_std(num_list)))
 
     # EXAMPLE
     # -------
@@ -476,7 +495,9 @@ def distr_spread(num_list):
     # (3, 1.7, 1.3038404810405297)
     
 ######## Test your Code Below ###########
-nums = [1,1,1,2,3,4,5,6,7,8,9,9,10,11,12]
+
+# nums = [1,1,1,2,3,4,5,6,7,8,9,9,10,11,12,1,-5]
+nums = [2, 2, 3, 4, 5]
 print(distr_spread(nums))
 
 
