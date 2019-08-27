@@ -599,42 +599,58 @@ def fizz_buzz(low, high):
 
 string_to_mod = 'Favartia perita is a species of sea snail'
 
-def lower_first_rest_upper(stng):
-    my_list = []
+def lower_first_rest_upper(s):
+    l = s.split(" ")
+    new_word = str()
+    new_sentence = str()
+    for word in l:
+        for ind, letter in enumerate(word):
+            if ind == 0:
+                new_word += letter.lower()
+            else:
+                new_word += letter.upper()
+        new_sentence += new_word + " "
+        new_word = ""
+    new_sentence = new_sentence[0:-1]
+    return(new_sentence)
 
-
-    pass
-
-
-print(lower_first_rest_upper(string_to_mod))
-
+# print(lower_first_rest_upper(string_to_mod))
 
 '''python
 string_to_mod = 'Favartia perita is a species of sea snail'
 
 #########  Complete the Code Below ###########
 
-
-
-
-
-
 ######## Test your Code Below ###########
 print(lower_first_rest_upper(string_to_mod))
 '''
 
 # <br><br><br>
-# **Write a function called `add_and_repeat_strings` that takes two strings and an integer `repeats` as arguments. The function should return those two strings, concatenated and separated by a space, and repeated `repeats` times.**
+# **Write a function called `add_and_repeat_strings` that takes two strings and an integer `repeats` as arguments. 
+# The function should return those two strings, concatenated and separated by a space, and repeated `repeats` times.**
 
+def add_and_repeat_strings(s1, s2, repeats):
+    result = (s1 + " " + s2) * repeats
+    return(result)
+
+# print(add_and_repeat_strings("the book is yellow", "and very red too.", 3))
 
 '''python
-
-
 
 '''
 
 # <br><br><br>
-# **Write a function called `make_good_filename` that takes a string as input. Remove all non-alphanumeric characters. Separate all words in the string with an underscore `_`. If the first character in the string is a number, remove it. Make sure your filename is all lowercase.**
+# **Write a function called `make_good_filename` that takes a string as input. 
+# Remove all non-alphanumeric characters. Separate all words in the string with an underscore `_`. 
+# If the first character in the string is a number, remove it. Make sure your filename is all lowercase.**
+
+def make_good_filename(s):
+    pass
+
+print(make_good_filename("833 Fi^$#!#le is R#%^&#eally #$$#good-.pne"))
+
+
+
 
 
 '''python
