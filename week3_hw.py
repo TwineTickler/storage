@@ -539,26 +539,42 @@ def greatest_common_divisor(int1, int2):
 # **Write the `get_primes_dig_sum_to_n` function, that takes `list_of_ints` and `dig_sum` as arguments. 
 # The function should return all numbers in the input list that are primes with recursive digit sums equal to `dig_sum`**
 
+def get_primes(list_of_ints):
+    list_of_ints.sort()
+    primes = []
+    prime = True
+    for n in list_of_ints:
+        if n > 1:
+            # number is greater than 1, check if prime
+            prime = True
+            for n2 in range(2,n):
+                if n % n2 == 0:
+                    prime = False
+                    break
+            if prime == True:
+                primes.append(n)
+    return(primes)
+
 def get_primes_dig_sum_to_n(list_of_ints, dig_sum):
-    return True
-    # I'm not sure what this question is asking.
+    result = []
+    primes = get_primes(list_of_ints)
+    for n in primes:
+        sum = 0
+        x = n
+        while x > 0:
+            sum += (x % 10)
+            x = (x // 10)
+        # result.append(sum)
+        if sum == dig_sum:
+            result.append(n)
+    return(result)
 
-
-# print(get_primes_dig_sum_to_n(nums, 5))
-
-
-
-
-
-
-
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 12, 14, 15, 16, 17, 18, 19, 20, -1, 0, 113, 101, 112, 147]
+# print(get_primes(nums))
+# print(get_primes_dig_sum_to_n(nums, 10))
+# print(get_primes(nums))
 
 '''python
-
-
-
-
-
 '''
 
 # <br><br><br>
@@ -582,10 +598,6 @@ def fizz_buzz(low, high):
 # print(fizz_buzz(4, 20))
 
 '''python
-
-
-
-
 '''
 
 # <br><br><br>
@@ -644,20 +656,33 @@ def add_and_repeat_strings(s1, s2, repeats):
 # Remove all non-alphanumeric characters. Separate all words in the string with an underscore `_`. 
 # If the first character in the string is a number, remove it. Make sure your filename is all lowercase.**
 
+def remove_non_alphanumeric_chars(s):
+    result = ""
+    for char in s:
+        if char.isalnum() or char == "_":
+            result += char
+
+    return(result)
+
+def swap_spaces(s):
+    result = ""
+    for char in s:
+        if char == " ":
+            result += "_"
+        else:
+            result += char
+    return(result)
+
 def make_good_filename(s):
-    pass
+    result = swap_spaces(s)
+    result = remove_non_alphanumeric_chars(result)
+    return(result)
 
-print(make_good_filename("833 Fi^$#!#le is R#%^&#eally #$$#good-.pne"))
-
-
-
-
+filename1 = "5This is a 5544455 file"
+filename2 = "833 Fi^$#!#le is R#%^&#eally #$$#good-.pne"
+print(make_good_filename(filename1))
 
 '''python
-
-
-
-
 '''
 
 # <br><br><br>
