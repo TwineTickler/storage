@@ -676,26 +676,42 @@ def swap_spaces(s):
 def make_good_filename(s):
     result = swap_spaces(s)
     result = remove_non_alphanumeric_chars(result)
-    return(result)
+    # if first character is a number, remove it
+    if result[0].isnumeric():
+        result = result[1:]
+    return(result.lower())
 
-filename1 = "5This is a 5544455 file"
+filename1 = "This is a 5544455 file"
 filename2 = "833 Fi^$#!#le is R#%^&#eally #$$#good-.pne"
-print(make_good_filename(filename1))
+# print(make_good_filename(filename1))
 
 '''python
 '''
 
 # <br><br><br>
-# **Write a function called `make_capital_camelcase` that takes a string as an argument, and returns that string in "capital camelcase" form. Remove punctuation and any non-alphanumeric characters. Don't allow the first character of the returned string to be a number.**
+# **Write a function called `make_capital_camelcase` that takes a string as an argument, and returns that string in "capital camelcase" form. 
+# Remove punctuation and any non-alphanumeric characters. Don't allow the first character of the returned string to be a number.**
 # * ex. "I am a string" -> "IAmAString"
+
+def make_capital_camelcase(s):
+    if s[0].isnumeric:
+        s = s[1:]
+    string_split = s.split(" ")
+    new_s = ""
+    for word in string_split:
+        new_word = ""
+        for i, l in enumerate(word):
+            if i == 0:
+                new_word += l.upper()
+            else:
+                new_word += l.lower()
+        new_s += new_word
+    return(remove_non_alphanumeric_chars(new_s))
+
+# print(make_capital_camelcase("1some king of STRING here."))
 
 
 '''python
-
-
-
-
-
 '''
 
 # <br><br><br>
@@ -704,12 +720,17 @@ print(make_good_filename(filename1))
 # * $P(X=k) = e^{-\lambda} \cdot \frac{\lambda^k}{k!}$
 # * note that the Python `math` module contains the `exp()` function to compute $e^x$
 
+def poisson_pmf():
+    pass
+
+
+
+
+
+
+
 
 '''python
-
-
-
-
 '''
 
 # <br><br><br>
