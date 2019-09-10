@@ -720,28 +720,40 @@ def make_capital_camelcase(s):
 # * $P(X=k) = e^{-\lambda} \cdot \frac{\lambda^k}{k!}$
 # * note that the Python `math` module contains the `exp()` function to compute $e^x$
 
-def poisson_pmf():
-    pass
+def factorial(x):
+    result = 1
+    if x > 1:
+        while x > 1:
+            result *= x
+            x -= 1
+    else:
+        result = 1
+    return(result)
 
+def poisson_pmf(k, lam):
+    result = (((lam ** k) * (math.e ** (-lam))) / factorial(k))
+    return(result)
 
-
-
-
-
-
+# print(poisson_pmf(3, 5.5))
+# print(factorial(1))
 
 '''python
 '''
 
 # <br><br><br>
-# **Write the `poisson_dict` function in order to gain more insight into the Poisson distribution. Return a dictionary, where the keys represent the values of k for a given parameter `lmbda`. Include a `low` and `high` parameter as well, for the range of poisson values in which we are interested.**
+# **Write the `poisson_dict` function in order to gain more insight into the Poisson distribution. 
+# Return a dictionary, where the keys represent the values of k for a given parameter `lmbda`. 
+# Include a `low` and `high` parameter as well, for the range of poisson values in which we are interested.**
 
+def poisson_dict(lam, low, high):
+    result = {}
+    for x in range(low, high+1):
+        result.update({x:poisson_pmf(x, lam)})
+    return(result)
+
+# x
 
 '''python
-
-
-
-
 '''
 
 # <br><br><br>
@@ -750,6 +762,14 @@ def poisson_pmf():
 # * You can get Euler's number $e$ from the `math` module.
 # * Print the output from the function:
 #     * expected result: `(0.7310585786300049, 1)`
+
+def sigmoid_logistic(x, threshold):
+    thresh = 1
+    result = 1 / (1 + (math.e ** (-x)))
+    if threshold > result:
+        thresh = 0
+    return(result, thresh)
+
 
 
 '''python
@@ -781,32 +801,37 @@ def sigmoid_logistic(x, threshold):
         
     # EXAMPLE
     # -------
-'''
-    x = -9
-    threshold = 0.4
-    '''
+
+# x = -9
+# threshold = 0.4
+  
     # >>> sigmoid_logistic(x, threshold)
     # (0.00012339457598623172, 0)
-'''
-   
-
-
 
 ######## Test your Code Below ###########
-x = 1
-threshold = 0.73
-print(sigmoid_logistic(x, threshold))
-'''
+# x = 1
+# threshold = 0.73
+# print(sigmoid_logistic(x, threshold))
+
+
+
+
+
 
 # <br><br><br>
-# **Write a function called `sigmoid_values_in_range` that  utilizes the `sigmoid_logistic` function. `sigmoid_values_in_range` takes three float arguments, `low`, `high`, and `step`, representing the values of `x` in the sigmoid function above. Return a dictionary where the keys are the values of x, and the values are the calculations returned from the sigmoid function.**
+# **Write a function called `sigmoid_values_in_range` that  utilizes the `sigmoid_logistic` function. 
+# `sigmoid_values_in_range` takes three float arguments, `low`, `high`, and `step`, representing the values of `x` in the sigmoid function above. 
+# Return a dictionary where the keys are the values of x, and the values are the calculations returned from the sigmoid function.**
+
+def sigmoid_values_in_range(low, high, step):
+    pass
+
+
+
+
 
 
 '''python
-
-
-
-
 '''
 
 # <br><br><br>
