@@ -23,3 +23,36 @@ Personal Notes
 - Prod2
 - Rhozet on Marketing Prod2
 - audio server
+
+
+
+
+
+
+David Ribb - Open with Prayer
+Leland - Does anyone know anything about a live shoot with Kenneth Copeland? Nope. Their engineers are talking to us but we don't know anything and their engineers don't know.
+Sean - have you heard anything about Prod2?
+Leland - I heard yesterday that they can begin working on it.
+Sean - we were having some issues testing it both on SMB and NFS a few days ago but I don't know if David got those issues resolved.
+Jake - we are continueing to have issues with SMB on prod1. it has now moved on to two other systems we have so we have to use NFS
+Sean - I think the logic is, David is the only one who can work on this issue and right now I believe prod2 is his highest priority. So since y'all are still working on NFS right now, that's probably not as high a priority as getting prod2 up.
+David - Do we want to move forward with the Dante?
+Leland - we ordered a switch. it will be here before Tuesday.
+David - Israel, I had some questions for Jonathan but didn't know if he was going to be here today.
+Doug - Kyron connection. An SDI-DA, I don't know if it's already a routable path. The numbers aren't the same on each end of the cable.
+Frank - physically show me the cables you're talking about this afternoon.
+Doug - it's not urgent but we don't know when it's being deployed.
+Leland - I think we're going to first get the REAL up and then look at that.
+David - brief discussion about the studio schedule coming up this week. Any update on the harmonics encoder for israel?
+Stephen - we have approval for what we had before. If you would like 16 channels then we can look at getting approval for that.
+David - the most critical for us is just maintaining 4, like what we had before.
+Shannon - heads up: fire drills today at 11:30. We had some issue with Five9 that they are saying Frank needs to look in to. We are going to setup the security camera's so your night guys (Patti) can see what's going on at night. Also, we're going to restore communication between you guys and Prayer night shift.
+Jeff - Sensor going in points wise. Today, shoot at 11 in Studio A. Tomorrow two GMS's.
+Steve - I have my wire guys going in at about 4. They have to pull studio A and B.
+Shannon - bring them by security when they get here.
+Steve - They think they can do it in 6 hours.
+Eric - Next tuesday at 9 or 12 we are trying to do the cold read.
+David - can't do 12 noon.
+Eric - Ok, i'll push it for 9 then.
+Kevin - I want to look at getting a new internet provider for Marcus's house. His current provider is dying about once a week. We will probably be changing our daystarguest password. We do block IMAP communication on that network.
+
