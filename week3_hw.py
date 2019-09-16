@@ -824,6 +824,32 @@ def sigmoid_logistic(x, threshold):
 # Return a dictionary where the keys are the values of x, and the values are the calculations returned from the sigmoid function.**
 
 def sigmoid_values_in_range(low, high, step):
+    stopper = True
+    if high < low:
+        return("Error")
+    result = {}
+    while stopper:
+        if low < high:
+            result[low] = sigmoid_logistic(low, 0.4)
+            low += step
+        else:
+            stopper = False
+    return(result)
+
+
+# print(sigmoid_values_in_range(0, 5, .1))
+
+'''python
+'''
+
+# <br><br><br>
+# **Write a function called `sigmoid_distr_by_thresh` that utilizes the `sigmoid_logistic` function. 
+# `sigmoid_distr_by_thresh` takes three float arguments, `low`, `high`, and `step`, 
+# representing the values of `x` in the sigmoid function, as well as `threshold`, to be passed into the call to `sigmoid_logistic`. 
+# This function should return a dictionary with two keys, `>{threshold}` and `<={threshold}`, 
+# where the values are the results in those respective ranges**
+
+def sigmoid_distr_by_thresh(low, high, step, threshold):
     pass
 
 
@@ -831,11 +857,6 @@ def sigmoid_values_in_range(low, high, step):
 
 
 
-'''python
-'''
-
-# <br><br><br>
-# **Write a function called `sigmoid_distr_by_thresh` that utilizes the `sigmoid_logistic` function. `sigmoid_distr_by_thresh` takes three float arguments, `low`, `high`, and `step`, representing the values of `x` in the sigmoid function, as well as `threshold`, to be passed into the call to `sigmoid_logistic`. This function should return a dictionary with two keys, `>{threshold}` and `<={threshold}`, where the values are the results in those respective ranges**
 
 
 '''python
