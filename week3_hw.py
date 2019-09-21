@@ -1,46 +1,45 @@
 # **What is the bash/terminal command for cloning a repository to your local machine?**
 
 '''
-git clone "reponame"
+# git clone "reponame"
 
 '''
 
 # **What is the bash/terminal command for updating the repository on your local machine from the remote repository?**
 
 '''
-git pull
+# git pull
 
 '''
 
 # **What are the bash/terminal commands to commit your local changes and push them to the remote repository?**
 
 '''
-git status
-git add *
-git commit -m "comment"
-git push
+# git status
+# git add *
+# git commit -m "comment"
+# git push
 
 '''
 # 
 # **What bash/terminal command will inform you of what files have changed and what files are being tracked by git?**
 
 '''
-git status
+# git status
 
 '''
 
 # **What bash/terminal command creates a new branch within a repository?**
 
 '''
-git branch
-?
+# git checkout -b new_branch
 
 '''
 
 # **What bash/terminal command switches to a different branch within a repo?**
 
 '''
-git checkout
+# git checkout
 
 '''
 
@@ -51,7 +50,7 @@ git checkout
 #   pathname of the current working directory to the terminal?**
 
 '''
-pwd
+# pwd
 
 '''
 
@@ -59,79 +58,67 @@ pwd
 #   directory**
 
 '''
-ls -lh
+# ls -lh
 
 '''
 
 # **How do you go up one directory?**
 
 '''
-cd ..
+# cd ..
 
 '''
 
 # **How do you change directories to the home directory in your operating system?**
 
 '''
-cd ~
+# cd ~
 
 '''
 
 # **How do you list the files in a subdirectory?**
 
 '''
-ls subdir
+# ls subdir
 
 '''
 
 # **How do you create three text files in one command in the terminal?**
 
 '''
-touch file1 file2 file3
+# touch file1 file2 file3
 
 '''
 
 # **How do you remove a file?**
 
 '''
-rm file
+# rm file
 
 '''
 
 # **How do you create a directory?**
 
 '''
-mkdir dir
+# mkdir dir
 
 '''
 
 # **How do you remove a directory and recursively delete all of its contents?**
 
-'''
-rm -r dir
-
-'''
+# rm -r dir
 
 # **How do you rename a file in bash?**
 
-'''
-mv file newfilename
-
-'''
+# mv file newfilename
 
 # **How do you copy a file in bash?**
 
-'''
-cp file filecopy
-
-'''
+# cp file filecopy
 
 # **How do you copy a directory and all its contents in bash?**
 
-'''
-cp -r dir dircopy
-
-'''
+# cp -r dir dircopy
 
 # <br><br><br><br><br><br>
 # # Python Coding
@@ -142,13 +129,9 @@ cp -r dir dircopy
 
 
 '''python
-'''
-'''
+
 muliline comment
 here
-'''
-'''
-
 
 '''
 
@@ -162,6 +145,7 @@ int
 float
 tuple (1, 2, 3, 4, 5) - ordered
 str
+complex
 
 Mutable:
 list [1, 2, 3, 4, 5] - ordered
@@ -173,13 +157,6 @@ dict {'key':'value','key2':'value2'} - unordered
 # <br><br><br>
 # **Write a function named `build_type_tuple` that takes an integer or float as an argument and returns a 
 # tuple containing the argument converted to `int`, `float`, `bool`, `str`, `complex` and a unicode string (use `chr()`)**
-
-
-'''python
-
-
-
-'''
 
 # def build_type_tuple(x):
 #     return (int(x), float(x), bool(x), str(x), complex(x), chr(x))
@@ -197,43 +174,29 @@ dict {'key':'value','key2':'value2'} - unordered
 
 # print(do_some_math(1, 5, 3.665453, 2, -6.42))
 
-'''python
-'''
-
-
-
 # <br><br><br>
 # **Write a function named `remainder_after_expansion` that takes three arguments: `x`, `exponent`, and `divisor`. 
 # Return the remainder from dividing `x` raised to the `exponent` by the `divisor`.**
 
-
-
-
-'''python
 def remainder_after_expansion(x, exponent, divisor):
     return (x ** exponent) % divisor
 
-print(remainder_after_expansion(5, 3, 7))
-
-'''
+# print(remainder_after_expansion(5, 3, 7))
 
 # <br><br><br>
 # **Write a function named `id_of_product` that returns the id of the product of arguments `x` and `y`**
 
-
-'''python
-
 def id_of_product(x, y):
     return id(x * y)
 
-print(id_of_product(5, 6))
-'''
+# print(id_of_product(5, 6))
 
 # <br><br><br>
 # **Write a function called `divisible_by_low_primes` that takes a number as input from the user, 
 # and returns `True` if that number is divisible by 2, 3, 5, or 7, or `False` if it is divisible by none of those.**
 
-def divisible_by_low_primes(x):
+def divisible_by_low_primes():
+    x = int(input("Enter a number: "))
     if x == 0:
         return False
     elif (x % 2 == 0) or (x % 3 == 0) or (x % 5 == 0) or (x % 7 == 0):
@@ -253,9 +216,6 @@ def func2(x):
 # print(divisible_by_low_primes(int(input("Enter a number: "))))
 # print(func2(int(input("Enter a number: "))))
 
-'''python
-'''
-
 # <br><br><br>
 # **Write a function called `sum_of_divisible_by_n` that takes three arguments, `low`, `high` and `n`. 
 # Sum the numbers in the range from `low` to `high` inclusive that are divisible by `n`**
@@ -267,12 +227,7 @@ def sum_of_divisible_by_n(low, high, n):
             result += x
     return result
 
-
-
 # print(sum_of_divisible_by_n(4, 20, 6))
-
-'''python
-'''
 
 # <br><br><br>
 # **Write a function called `get_mode` that takes a list of numbers as an argument and returns the most frequently occurring number in that list. 
@@ -302,10 +257,6 @@ def get_mode(l):
 # print(get_mode([1, 1, 2, 6, 4, 8, 6, 3, 4, 6, 7, 8, 2, 0, 8, 9, 8, 8, 8, 9]))
 # print(get_index_of_first_largest_number([1, 2, 3, 4, 5, 4, 3, 2, 0, 3, 3]))
 
-
-'''python
-'''
-
 # <br><br><br>
 # **Write a function called `verify_string_length` that takes two arguments, a `string` and a `min_length`. 
 # Return `True` if `string` meets the `min_length` requirement, otherwise `False`**
@@ -316,12 +267,7 @@ def verify_string_length(s, min_length):
     else:
         return False
 
-'''python
-
-print(verify_string_length('This is a string', 17))
-
-
-'''
+# print(verify_string_length('This is a string', 17))
 
 # <br><br><br>
 # **Write a function called `repeating_num_series` that takes a list of numbers `series_of_numbers` and an integer called `num_times` as an argument. 
@@ -330,11 +276,7 @@ print(verify_string_length('This is a string', 17))
 def repeating_num_series(lst, num_times):
     return lst * num_times
 
-'''python
-
-print(repeating_num_series([4, 3, 2, 1], 5))
-
-'''
+# print(repeating_num_series([4, 3, 2, 1], 5))
 
 # <br><br><br>
 # **Write a function called `get_first_and_last` that takes a list as an argument and returns a tuple containing the first and last elements of that list. 
@@ -343,12 +285,7 @@ print(repeating_num_series([4, 3, 2, 1], 5))
 def get_first_and_last(lst):
     return (lst[0], lst[-1])
 
-'''python
-
-print(get_first_and_last([5, 2, 3, 4, 2, 3, 9]))
-
-
-'''
+# print(get_first_and_last([5, 2, 3, 4, 2, 3, 9]))
 
 # <br><br><br>
 # **Write a function called `nth_element` that takes a list and `nth` as arguments. Return a list containing every `nth` element of the input list, starting with the first element.**
@@ -360,20 +297,12 @@ def nth_element(lst, nth):
         return False
     return lst[0::nth]
     
-'''python
-
-print(nth_element(one_through_twenty, 3))
-
-
-'''
+# print(nth_element(one_through_twenty, 3))
 
 # <br><br><br>
 # **Write a function `central_tendencies` that returns the mean, median and mode of a list of numbers**
 # * Print the output from the function:
 #     * expected result: `(5.933333333333334, 6.0, 1.0)`
-
-
-'''python'''
 
 def get_mean(num_list):
     result = 0
@@ -505,9 +434,6 @@ nums = [1,1,1,2,3,4,5,6,7,8,9,9,10,11,12,1,-5]
 # nums = [2, 2, 3, 4, 5]
 # print(distr_spread(nums))
 
-
-
-
 # <br><br><br>
 # **Write the `greatest_common_divisor` function, which takes two integerst and returns the largest number that divides both numbers.**
 
@@ -523,17 +449,6 @@ def greatest_common_divisor(int1, int2):
     return(result)
 
 # print(greatest_common_divisor(90, 150))
-
-
-
-
-
-'''python
-
-
-
-
-'''
 
 # <br><br><br>
 # **Write the `get_primes_dig_sum_to_n` function, that takes `list_of_ints` and `dig_sum` as arguments. 
@@ -574,9 +489,6 @@ nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 12, 14, 15, 16, 17, 18, 19, 20, -
 # print(get_primes_dig_sum_to_n(nums, 10))
 # print(get_primes(nums))
 
-'''python
-'''
-
 # <br><br><br>
 # **Write the classic "Fizz Buzz" coding challenge. Define a function `fizz_buzz` that takes `low` and `high` as arguments. 
 # The function should run through all the numbers in the range from `low` to `high`, `print()` 
@@ -596,9 +508,6 @@ def fizz_buzz(low, high):
             print(x)
 
 # print(fizz_buzz(4, 20))
-
-'''python
-'''
 
 # <br><br><br>
 # **Write a function `lower_first_rest_upper()` that takes a string as input and returns a string where the first letter of each word is lowercase, 
@@ -647,10 +556,6 @@ def add_and_repeat_strings(s1, s2, repeats):
 
 # print(add_and_repeat_strings("the book is yellow", "and very red too.", 3))
 
-'''python
-
-'''
-
 # <br><br><br>
 # **Write a function called `make_good_filename` that takes a string as input. 
 # Remove all non-alphanumeric characters. Separate all words in the string with an underscore `_`. 
@@ -685,9 +590,6 @@ filename1 = "This is a 5544455 file"
 filename2 = "833 Fi^$#!#le is R#%^&#eally #$$#good-.pne"
 # print(make_good_filename(filename1))
 
-'''python
-'''
-
 # <br><br><br>
 # **Write a function called `make_capital_camelcase` that takes a string as an argument, and returns that string in "capital camelcase" form. 
 # Remove punctuation and any non-alphanumeric characters. Don't allow the first character of the returned string to be a number.**
@@ -709,10 +611,6 @@ def make_capital_camelcase(s):
     return(remove_non_alphanumeric_chars(new_s))
 
 # print(make_capital_camelcase("1some king of STRING here."))
-
-
-'''python
-'''
 
 # <br><br><br>
 # **Complete the `poisson_pmf` function:**
@@ -737,9 +635,6 @@ def poisson_pmf(k, lam):
 # print(poisson_pmf(3, 5.5))
 # print(factorial(1))
 
-'''python
-'''
-
 # <br><br><br>
 # **Write the `poisson_dict` function in order to gain more insight into the Poisson distribution. 
 # Return a dictionary, where the keys represent the values of k for a given parameter `lmbda`. 
@@ -752,9 +647,6 @@ def poisson_dict(lam, low, high):
     return(result)
 
 # x
-
-'''python
-'''
 
 # <br><br><br>
 # **Write a function `sigmoid_logistic()` that returns $f(x)$ for the sigmoid/logistic function $f(x)=\frac{1}{1+e^{-x}}$,  as well as 0 or 1 based on the setting of a threshold**
@@ -769,8 +661,6 @@ def sigmoid_logistic(x, threshold):
     if threshold > result:
         thresh = 0
     return(result, thresh)
-
-
 
 '''python
 def sigmoid_logistic(x, threshold):
@@ -815,9 +705,6 @@ def sigmoid_logistic(x, threshold):
 
 
 
-
-
-
 # <br><br><br>
 # **Write a function called `sigmoid_values_in_range` that  utilizes the `sigmoid_logistic` function. 
 # `sigmoid_values_in_range` takes three float arguments, `low`, `high`, and `step`, representing the values of `x` in the sigmoid function above. 
@@ -839,9 +726,6 @@ def sigmoid_values_in_range(low, high, step):
 
 # print(sigmoid_values_in_range(0, 5, .1))
 
-'''python
-'''
-
 # <br><br><br>
 # **Write a function called `sigmoid_distr_by_thresh` that utilizes the `sigmoid_logistic` function. 
 # `sigmoid_distr_by_thresh` takes three float arguments, `low`, `high`, and `step`, 
@@ -852,22 +736,28 @@ def sigmoid_values_in_range(low, high, step):
 def sigmoid_distr_by_thresh(low, high, step, threshold):
     pass
 
-
-
-
-
-
-
-
-'''python
-
-
-
-
-'''
-
 # <br><br><br>
-# **Write a function called `show_nice_distro` that takes a dictionary as an argument. Assume that the keys in this dictionary represent the value of a random draw, and the values are the counts of occurrences of that value. The printed display should look something like:**
+# **Write a function called `show_nice_distro` that takes a dictionary as an argument. 
+# Assume that the keys in this dictionary represent the value of a random draw, and the values are the counts of occurrences of that value. 
+# The printed display should look something like:**
+
+random_dist = {0:1, 1:4, 2:7, 3:5, 4:3, 5:1}
+
+def show_nice_distro(d):
+    line = ""
+    stars = 1
+    for i, v in d.items():
+        # print(str(i) + ", " + str(v))
+        line = str(i) + ": "
+        stars = 1
+        while stars <= v:
+            line += "*"
+            stars += 1
+        print(line)
+    return(d)
+
+
+# show_nice_distro(random_dist)
 
 '''
 0: *
@@ -878,51 +768,39 @@ def sigmoid_distr_by_thresh(low, high, step, threshold):
 5: *
 '''
 
-# **Try to use this function to display the results of the distributions you write from here on. You will want to reduce the number of asterisks when they exceed a length. Play around with it to make it look nice.**
-
-
-'''python
-
-
-
-
-'''
+# **Try to use this function to display the results of the distributions you write from here on. 
+# You will want to reduce the number of asterisks when they exceed a length. Play around with it to make it look nice.**
 
 # <br><br><br>
-# **Write a function titled `remove_stopwords` that takes a string as an argument. Return a dictionary, where the keys are words, and the value is the count of those words in the document. Lowercase your keys and do not include numbers or punctuation. Do not include stopwords in your distribution.  A stopword can be considered a very common word in a language. These words are often unhelpful when comparing similarity between two documents. Use the defined stopwords below.**
+# **Write a function titled `remove_stopwords` that takes a string as an argument. 
+# Return a dictionary, where the keys are words, and the value is the count of those words in the document. 
+# Lowercase your keys and do not include numbers or punctuation. 
+# Do not include stopwords in your distribution.  
+# A stopword can be considered a very common word in a language. 
+# These words are often unhelpful when comparing similarity between two documents. 
+# Use the defined stopwords below.**
 
-# * use these stopwords: 
-'''
-['the', 'and', 'of', 'it', 'he','she',
- 'it','was', 'i', 'me', 'my', 'myself', 
- 'we', 'our', 'us', 'your', 'him', 
- 'what', 'which', 'to', 'from', 'where',
- 'a', 'in', 'on', 'be', 'its']
- '''
-
-
-'''python
 paragraph = '''
-# From Safety To Where was a post-punk 
-# trio from Columbia, South Carolina, USA, known for 
-# its jarring guitar/bass interplay and frantic, 
-# screaming vocals. The Joy Division reference in 
-# the band's name was only slightly evident in its 
-# music, which evolved from terse, minimalist, 
-# post-hardcore into dark, melodic post-punk. 
-# In 2002, the band signed to Radical Records in 
-# New York City, which released their most notable 
-# album, Irreversible Trend. The album ranked in 
-# the Top 75 of the College Music Journal Top 200 
-# albums chart that July, spawning the college radio 
-# hit, "Only Now". Propelled by the appearance of 
-# its ethereal instrumental, "Monument" 
-# (from Irreversible Trend) on MTV's The Real 
-# World and several tours of the East Coast and 
-# Midwest in 2002, the band recorded its final 
-# album, Interference, over the course of the next 
-# two years. However, the band succumbed to a souring 
-# internal relationship before it could be released.'''
+From Safety To Where was a post-punk 
+trio from Columbia, South Carolina, USA, known for 
+its jarring guitar/bass interplay and frantic, 
+screaming vocals. The Joy Division reference in 
+the band's name was only slightly evident in its 
+music, which evolved from terse, minimalist, 
+post-hardcore into dark, melodic post-punk. 
+In 2002, the band signed to Radical Records in 
+New York City, which released their most notable 
+album, Irreversible Trend. The album ranked in 
+the Top 75 of the College Music Journal Top 200 
+albums chart that July, spawning the college radio 
+hit, "Only Now". Propelled by the appearance of 
+its ethereal instrumental, "Monument" 
+(from Irreversible Trend) on MTV's The Real 
+World and several tours of the East Coast and 
+Midwest in 2002, the band recorded its final 
+album, Interference, over the course of the next 
+two years. However, the band succumbed to a souring 
+internal relationship before it could be released.'''
 
 stopwords = ['the', 'and', 'of', 'it', 'he','she',
              'it','was', 'i', 'me', 'my', 'myself', 
@@ -930,37 +808,78 @@ stopwords = ['the', 'and', 'of', 'it', 'he','she',
              'what', 'which', 'to', 'from', 'where',
              'a', 'in', 'on', 'be', 'its']
 
+def remove_stopwords(p):
+    l = make_good_filename(p).split("_")
+    d = {}
+    for sw in stopwords:
+        d[sw] = l.count(sw)
+    return(d)
 
+# print(remove_stopwords(paragraph))
+
+# <br><br><br>
+# **Write a function called `trinary_sums_distribution` that takes no arguments. 
+# The length of the trinary should be 4 "trits". 
+# Your function should return a dictionary where the keys represent sums of the the "trits", 
+# and the values represent the counts of occurrences of those sums**
+
+def trinary_sums_distribution():
+    current_sum = 0
+    d = {}
+    for x in range(0,3): # execute 3 times
+        for xx in range(0,3): # execute 9 times
+            for xxx in range(0,3): # execute 27 times
+                for xxxx in range(0,3): # execute 81 times
+                    current_sum = x + xx + xxx + xxxx
+                    # l.append(current_sum)
+                    # current_number = str(x) + str(xx) + str(xxx) + str(xxxx)
+                    if current_sum not in d.keys():
+                        d[current_sum] = 0
+                    d[current_sum] += 1
+    return(show_nice_distro(d))
+
+# trinary_sums_distribution()
+
+# <br><br><br>
+# **Write a function called `binary_trial` that generates a list of random binary of length `n`. 
+# Write another function called `binary_trial_sampler` that calls `binary_trial` `num_samples` times 
+# and returns a dictionary where the keys are the sums of 1's in the sampled binary lists, 
+# and the values are counts of the occurrences of those sums. 
+# Parameters to `binary_trial_sampler` should be `num_samples` and `n`, the length of the binary lists.**
+
+import random
+
+def binary_trial(n):
+    result = ""
+    for x in range(0,n): # loops n times
+        result += str(random.randrange(2))
+    return(result)
+
+def binary_trial_sampler(n, num_samples):
+    l = []
+    d = {}
+    for _ in range(0, num_samples):
+        this_sum = 0
+        this_trial = binary_trial(n)
+        for l in this_trial:
+            this_sum += int(l)
+        if this_sum not in d.keys():
+            d[this_sum] = 0
+        d[this_sum] += 1
+    return(d)
+
+# print(show_nice_distro(binary_trial_sampler(50, 50)))
 
 
 
 # <br><br><br>
-# **Write a function called `trinary_sums_distribution` that takes no arguments. The length of the trinary should be 4 "trits". Your function should return a dictionary where the keys represent sums of the the "trits", and the values represent the counts of occurrences of those sums**
+# **Write a function `word_permutations_dict()` that takes a string as input 
+# and returns a dictionary where the keys are every word in the input string, 
+# and the values are lists containing strings of every permutation of letters of that word**
 
-
-'''python
-
-
-
-
-
-'''
-
-# <br><br><br>
-# **Write a function called `binary_trial` that generates a list of random binary of length `n`. Write another function called `binary_trial_sampler` that calls `binary_trial` `num_samples` times and returns a dictionary where the keys are the sums of 1's in the sampled binary lists, and the values are counts of the occurrences of those sums. Parameters to `binary_trial_sampler` should be `num_samples` and `n`, the length of the binary lists.**
-
-
-'''python
-
-
-
-
-'''
-
-# <br><br><br>
-# **Write a function `word_permutations_dict()` that takes a string as input and returns a dictionary where the keys are every word in the input string, and the values are lists containing strings of every permutation of letters of that word**
 # * **DO NOT use an import of a permutations method here, implement an algorithm!**
-#     * You will likely want to use [Heap's Algorithm](https://en.wikipedia.org/wiki/Heap%27s_algorithm) to generate your permutations, although there are multiple other algorithms to accomplish this task.
+#     * You will likely want to use [Heap's Algorithm](https://en.wikipedia.org/wiki/Heap%27s_algorithm) to generate your permutations, 
+#   although there are multiple other algorithms to accomplish this task.
 # * You may want to use a helper function
 # * When you test your function, it will be more helpful to print the lengths of the lists for each key in the dictionary instead of printing the lists themselves.
 #     * expected result:
@@ -972,25 +891,48 @@ stopwords = ['the', 'and', 'of', 'it', 'he','she',
 #     * Hint:
 #         * What happens if you have repeated letters in a word?
 
-
-'''python
 test_string = 'moths are insect teddy bears'
 
 #########  Complete your Function Code Below ###########
 
+def word_permutations_dict(s):
+    d = {}
+    word_list = s.split()
+    for word in word_list:
+        d[word] = 0
+        counter = 1
+        while counter <= len(word):
 
 
-
+# word_permutations_dict(test_string)
 
 
 
 ######## Test your Code Below ###########
-perms_dict = word_permutations_dict(test_string)
-for k,v in perms_dict.items():
-    print('{} : {} permutations'.format(k, len(v)))
-'''
+# perms_dict = word_permutations_dict(test_string)
+# for k,v in perms_dict.items():
+#     print('{} : {} permutations'.format(k, len(v)))
 
 
-'''python
+# def rec_dig_sum(n):
+#     current_digit = n
+#     s = 0
+#     if n < 0:
+#       	return(current_digit)
+#     while current_digit > 0:
+#       	s += (current_digit % 10)
+#       	current_digit = (current_digit // 10)
+#     if s > 9:
+#       	s = rec_dig_sum(s)
+#     return(s)
 
-'''
+# def distr_of_rec_digit_sums(low=0, high=1500):
+#     d = {}
+#     for x in range(low, high+1):
+#       	this_sum = rec_dig_sum(x)
+#       	if this_sum not in d.keys():
+#         	d[this_sum] = 0
+#       	d[this_sum] += 1
+#     return(d)
+
+# print(distr_of_rec_digit_sums())
